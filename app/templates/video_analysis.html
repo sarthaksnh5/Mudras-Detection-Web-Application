@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section class="analysis-section">
+    <h2>Video Analysis</h2>
+    <div class="result-container">
+        <video controls class="analyzed-video">
+            <source src="{{ video_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Detected Gesture: <span class="result">{{ result }}</span></p>
+    </div>
+    <a href="{{ url_for('index') }}" class="back-button">Analyze Another Video</a>
+</section>
+{% endblock %}
